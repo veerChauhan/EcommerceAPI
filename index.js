@@ -20,6 +20,8 @@ mongoose.connect(process.env.MONGO_URL).then(() => {
     console.log(err);
 })
 
+// to use JSON for req and response
+app.use(express.json())
 //ROuter adding
 app.use('/api/user', userRouter)
 
